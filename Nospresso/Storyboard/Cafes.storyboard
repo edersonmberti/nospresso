@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Irt-9J-Obz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-LightItalic.ttf">
+            <string>OpenSans-LightItalic</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Cafés-->
+        <scene sceneID="FLv-r7-DTN">
+            <objects>
+                <viewController id="Irt-9J-Obz" customClass="CafesViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1D7-VI-LO7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XGe-Iy-yGl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cafe-celula" rowHeight="100" id="Vp4-Gh-6br" customClass="CafeTableViewCell" customModule="Nospresso" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vp4-Gh-6br" id="eFx-0N-ZGu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capsulas-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="nld-FG-VCW">
+                                                    <rect key="frame" x="16" y="17.5" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="8Kh-of-zjr"/>
+                                                        <constraint firstAttribute="width" constant="65" id="ycL-sJ-5IT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensidade 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-PG-YIM">
+                                                    <rect key="frame" x="97" y="70" width="66" height="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-LightItalic" family="Open Sans" pointSize="10"/>
+                                                    <color key="textColor" name="texto-discreto"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Eh-0y-PL7">
+                                                    <rect key="frame" x="97" y="11" width="249" height="36.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="India" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-tn-xao">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="19"/>
+                                                            <color key="textColor" name="texto-cinza"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café com robusta de monções" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWn-RA-Ia9">
+                                                            <rect key="frame" x="0.0" y="22.5" width="166" height="14"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-LightItalic" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" name="texto-discreto"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-0f-0xz">
+                                                    <rect key="frame" x="362" y="10" width="40" height="80"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpW-dZ-z23">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="0Wt-Qu-5ef"/>
+                                                                <constraint firstAttribute="width" constant="40" id="CYd-9n-0hP"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="favorito-preenchido"/>
+                                                            <state key="normal" image="heart" catalog="system"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-k7-KCB">
+                                                            <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="mHG-2w-eHS"/>
+                                                                <constraint firstAttribute="width" constant="40" id="zXU-6j-eD6"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="texto-cinza"/>
+                                                            <state key="normal" image="bag.badge.plus" catalog="system"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$2,80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q5-oq-D6g">
+                                                    <rect key="frame" x="313" y="67" width="45" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                    <color key="textColor" name="preco"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nld-FG-VCW" firstAttribute="centerY" secondItem="eFx-0N-ZGu" secondAttribute="centerY" id="7Lj-Yh-udj"/>
+                                                <constraint firstItem="4y9-0f-0xz" firstAttribute="centerY" secondItem="eFx-0N-ZGu" secondAttribute="centerY" id="Eug-pB-DNQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="4y9-0f-0xz" secondAttribute="trailing" constant="12" id="GnX-bU-bL2"/>
+                                                <constraint firstItem="zUF-PG-YIM" firstAttribute="leading" secondItem="9Eh-0y-PL7" secondAttribute="leading" id="JzB-15-25z"/>
+                                                <constraint firstItem="4q5-oq-D6g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zUF-PG-YIM" secondAttribute="trailing" constant="8" symbolic="YES" id="Puu-ud-usz"/>
+                                                <constraint firstItem="9Eh-0y-PL7" firstAttribute="top" secondItem="eFx-0N-ZGu" secondAttribute="top" constant="11" id="cO2-hK-1KP"/>
+                                                <constraint firstItem="nld-FG-VCW" firstAttribute="leading" secondItem="eFx-0N-ZGu" secondAttribute="leading" constant="16" id="dxG-Dh-Why"/>
+                                                <constraint firstItem="4q5-oq-D6g" firstAttribute="firstBaseline" secondItem="zUF-PG-YIM" secondAttribute="firstBaseline" constant="1" id="ehj-2S-zPT"/>
+                                                <constraint firstAttribute="bottom" secondItem="zUF-PG-YIM" secondAttribute="bottom" constant="18" id="fH3-Hj-Xgo"/>
+                                                <constraint firstItem="9Eh-0y-PL7" firstAttribute="leading" secondItem="nld-FG-VCW" secondAttribute="trailing" constant="16" id="gRx-i5-d3z"/>
+                                                <constraint firstItem="4y9-0f-0xz" firstAttribute="leading" secondItem="9Eh-0y-PL7" secondAttribute="trailing" constant="16" id="paE-vJ-OMD"/>
+                                                <constraint firstItem="4y9-0f-0xz" firstAttribute="leading" secondItem="4q5-oq-D6g" secondAttribute="trailing" constant="4" id="poJ-mJ-tfV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="capsulaImageView" destination="nld-FG-VCW" id="JMb-j0-GEf"/>
+                                            <outlet property="descricaoLabel" destination="rWn-RA-Ia9" id="E80-Jd-Jy6"/>
+                                            <outlet property="intensidadeLabel" destination="zUF-PG-YIM" id="hJw-P9-Xev"/>
+                                            <outlet property="precoLabel" destination="4q5-oq-D6g" id="ZcE-7c-CdP"/>
+                                            <outlet property="tituloLabel" destination="TWI-tn-xao" id="lW8-ry-d0Z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-Lq-C9c">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvv-dL-vzs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vish... deu ruim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14J-up-4T9">
+                                        <rect key="frame" x="20" y="369.5" width="374" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="14J-up-4T9" firstAttribute="leading" secondItem="Hvv-dL-vzs" secondAttribute="leading" constant="20" id="1On-9X-9Vh"/>
+                                    <constraint firstItem="14J-up-4T9" firstAttribute="centerX" secondItem="Hvv-dL-vzs" secondAttribute="centerX" id="ESh-CB-vj1"/>
+                                    <constraint firstAttribute="trailing" secondItem="14J-up-4T9" secondAttribute="trailing" constant="20" id="gOp-NH-E1T"/>
+                                    <constraint firstItem="14J-up-4T9" firstAttribute="centerY" secondItem="Hvv-dL-vzs" secondAttribute="centerY" id="nl0-2m-kFb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q4U-Fs-JFK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hvv-dL-vzs" firstAttribute="top" secondItem="Q4U-Fs-JFK" secondAttribute="top" id="0Dy-Xf-jge"/>
+                            <constraint firstItem="Hvv-dL-vzs" firstAttribute="leading" secondItem="Q4U-Fs-JFK" secondAttribute="leading" id="79u-gR-aPQ"/>
+                            <constraint firstItem="Q4U-Fs-JFK" firstAttribute="trailing" secondItem="Hvv-dL-vzs" secondAttribute="trailing" id="DrB-8c-KsY"/>
+                            <constraint firstItem="Q4U-Fs-JFK" firstAttribute="bottom" secondItem="Hvv-dL-vzs" secondAttribute="bottom" id="Emp-J2-XQT"/>
+                            <constraint firstItem="JZf-Lq-C9c" firstAttribute="centerY" secondItem="1D7-VI-LO7" secondAttribute="centerY" id="HAk-Bi-WTz"/>
+                            <constraint firstItem="Q4U-Fs-JFK" firstAttribute="bottom" secondItem="XGe-Iy-yGl" secondAttribute="bottom" id="SKL-vf-iPu"/>
+                            <constraint firstItem="JZf-Lq-C9c" firstAttribute="centerX" secondItem="1D7-VI-LO7" secondAttribute="centerX" id="eGZ-zk-xyQ"/>
+                            <constraint firstItem="XGe-Iy-yGl" firstAttribute="leading" secondItem="Q4U-Fs-JFK" secondAttribute="leading" id="h2v-dH-Z3z"/>
+                            <constraint firstItem="XGe-Iy-yGl" firstAttribute="top" secondItem="Q4U-Fs-JFK" secondAttribute="top" id="lFz-J2-vhW"/>
+                            <constraint firstItem="Q4U-Fs-JFK" firstAttribute="trailing" secondItem="XGe-Iy-yGl" secondAttribute="trailing" id="xH9-bK-VL4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JZf-Lq-C9c"/>
+                                <exclude reference="Hvv-dL-vzs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cafés" id="dlW-Dj-Jn3"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="JZf-Lq-C9c" id="cQe-gc-ViG"/>
+                        <outlet property="tableView" destination="XGe-Iy-yGl" id="OaA-Dp-vby"/>
+                        <outlet property="telaDeErro" destination="Hvv-dL-vzs" id="cnh-2E-SkZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0v-Rv-34Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag.badge.plus" catalog="system" width="124" height="128"/>
+        <image name="capsulas-inicio" width="136" height="136"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <namedColor name="favorito-preenchido">
+            <color red="0.89803921568627454" green="0.070588235294117646" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="preco">
+            <color red="0.050980392156862744" green="0.62352941176470589" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="texto-cinza">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="texto-discreto">
+            <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y9n-D7-V7J">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-BoldItalic.ttf">
+            <string>OpenSans-BoldItalic</string>
+        </array>
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Detalhes Cafe View Controller-->
+        <scene sceneID="Vri-4K-gMp">
+            <objects>
+                <viewController storyboardIdentifier="DetalhesCafeViewController" hidesBottomBarWhenPushed="YES" id="y9n-D7-V7J" customClass="DetalhesCafeViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79k-8a-TQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Kl-97-4xH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-9D-GY7" userLabel="Raiz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capsulas-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-f7-wSn">
+                                                <rect key="frame" x="16" y="16" width="382" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="zJ0-0M-mIz"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNq-JJ-RXh" userLabel="Intensidade &amp; Preço">
+                                                <rect key="frame" x="16" y="219" width="382" height="30.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ymg-7s-anX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qp6-mz-Vee" userLabel="Intensidade" customClass="ContadorIntesidadeStackView" customModule="Nospresso" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="WzZ-OT-flz"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoJ-8M-1vE">
+                                                                <rect key="frame" x="0.0" y="10" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kv2-JB-wl9" userLabel="Descrição">
+                                                <rect key="frame" x="16" y="302.5" width="382" height="177"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café com robusta de monções" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-Ph-och">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-BoldItalic" family="Open Sans" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D3y-Ba-qNG" userLabel="Origem">
+                                                        <rect key="frame" x="0.0" y="40" width="382" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-Hh-vev">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r40-4g-Hgn">
+                                                                <rect key="frame" x="0.0" y="19.5" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                                <color key="textColor" name="texto-discreto"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PaT-UJ-ncK" userLabel="Torrefação">
+                                                        <rect key="frame" x="0.0" y="89" width="382" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torrefação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-gP-2hx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-uu-jpG">
+                                                                <rect key="frame" x="0.0" y="19.5" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                                <color key="textColor" name="texto-discreto"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-RY-csT" userLabel="Perfil Aromático">
+                                                        <rect key="frame" x="0.0" y="138" width="382" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil Aromático" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-8c-Jg9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvI-4T-Y6b">
+                                                                <rect key="frame" x="0.0" y="19.5" width="382" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                                <color key="textColor" name="texto-discreto"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vGB-2y-vx3" userLabel="Formas de Degustação">
+                                                <rect key="frame" x="16" y="532.5" width="382" height="76.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMAS DE DEGUSTAÇÃO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhL-Ov-6Tk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPt-Cg-HUC">
+                                                        <rect key="frame" x="0.0" y="16.5" width="382" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="U37-5O-jFz"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J33-Ee-OyC">
+                                                <rect key="frame" x="16" y="662" width="382" height="46"/>
+                                                <color key="backgroundColor" name="verdao-vendedor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="ytg-Z9-hCG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                <state key="normal" title="Adicionar à Sacola">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="adicionouASacola:" destination="y9n-D7-V7J" eventType="touchUpInside" id="tp2-GH-6So"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8KZ-9D-GY7" firstAttribute="leading" secondItem="9Kl-97-4xH" secondAttribute="leading" id="DZT-80-HuR"/>
+                                    <constraint firstItem="8KZ-9D-GY7" firstAttribute="top" secondItem="9Kl-97-4xH" secondAttribute="top" id="UbR-pc-gnp"/>
+                                    <constraint firstAttribute="trailing" secondItem="8KZ-9D-GY7" secondAttribute="trailing" id="Vrg-Jf-bc7"/>
+                                    <constraint firstItem="8KZ-9D-GY7" firstAttribute="width" secondItem="9Kl-97-4xH" secondAttribute="width" id="fjj-XQ-p75"/>
+                                    <constraint firstAttribute="bottom" secondItem="8KZ-9D-GY7" secondAttribute="bottom" id="jEE-5Y-jJW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E3G-ZB-6FA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E3G-ZB-6FA" firstAttribute="trailing" secondItem="9Kl-97-4xH" secondAttribute="trailing" id="2ar-yZ-u0n"/>
+                            <constraint firstItem="E3G-ZB-6FA" firstAttribute="bottom" secondItem="9Kl-97-4xH" secondAttribute="bottom" id="k5u-Me-6c5"/>
+                            <constraint firstItem="9Kl-97-4xH" firstAttribute="leading" secondItem="E3G-ZB-6FA" secondAttribute="leading" id="mlp-FF-CsK"/>
+                            <constraint firstItem="9Kl-97-4xH" firstAttribute="width" secondItem="E3G-ZB-6FA" secondAttribute="width" id="pRW-Z7-172"/>
+                            <constraint firstItem="9Kl-97-4xH" firstAttribute="top" secondItem="E3G-ZB-6FA" secondAttribute="top" id="yGn-sr-jBr"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cafeImageView" destination="Wsx-f7-wSn" id="mU5-MU-BZq"/>
+                        <outlet property="intensidadeLabel" destination="zoJ-8M-1vE" id="bMp-b8-CbC"/>
+                        <outlet property="intensidadeStackView" destination="Qp6-mz-Vee" id="Jgl-LV-Jeq"/>
+                        <outlet property="origemLabel" destination="r40-4g-Hgn" id="kB2-1y-OrR"/>
+                        <outlet property="perfilAromaticoLabel" destination="pvI-4T-Y6b" id="HG6-CX-RBB"/>
+                        <outlet property="torrefacaoLabel" destination="Efr-uu-jpG" id="qvX-LZ-VQj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZa-lu-voe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="capsulas-inicio" width="136" height="136"/>
+        <namedColor name="texto-discreto">
+            <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="verdao-vendedor">
+            <color red="0.47843137254901963" green="0.69803921568627447" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

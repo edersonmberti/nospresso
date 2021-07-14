@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Acessórios-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AcessoriosViewController" id="Y6W-OH-hqX" customClass="AcessoriosViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-C8-h1u">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="acessorio-celula" rowHeight="100" id="Ytd-eU-K2c" customClass="AcessorioTableViewCell" customModule="Nospresso" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ytd-eU-K2c" id="C6C-qp-UIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquina-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="eFf-GA-TIx">
+                                                    <rect key="frame" x="5" y="9" width="82" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="82" id="AMV-cE-XWg"/>
+                                                        <constraint firstAttribute="width" constant="82" id="Zn1-aZ-A5I"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U5W-lw-zR5">
+                                                    <rect key="frame" x="383.5" y="15" width="25.5" height="70"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEF-Zv-Hl6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25.5" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="31" id="nLR-fj-pcz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <color key="tintColor" name="favorito-preenchido"/>
+                                                            <state key="normal" image="heart" catalog="system">
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOk-co-tFt">
+                                                            <rect key="frame" x="0.0" y="39" width="25.5" height="31"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <color key="tintColor" name="texto-cinza"/>
+                                                            <state key="normal" image="bag.badge.plus" catalog="system">
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jE0-hl-c0A">
+                                                    <rect key="frame" x="92" y="9" width="223.5" height="45"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xícaras ORIGINS Espresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-u2-Ffh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="223.5" height="23"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <color key="textColor" name="texto-cinza"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 115,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-e7-qDv">
+                                                            <rect key="frame" x="0.0" y="28" width="223.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                            <color key="textColor" name="preco"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfL-z7-2My" userLabel="Spacer">
+                                                    <rect key="frame" x="320.5" y="0.0" width="58" height="100"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eFf-GA-TIx" firstAttribute="leading" secondItem="C6C-qp-UIr" secondAttribute="leading" constant="5" id="7Zx-v6-RRW"/>
+                                                <constraint firstItem="eFf-GA-TIx" firstAttribute="centerY" secondItem="C6C-qp-UIr" secondAttribute="centerY" id="7hw-kR-gS0"/>
+                                                <constraint firstItem="YfL-z7-2My" firstAttribute="top" secondItem="C6C-qp-UIr" secondAttribute="top" id="Jqr-c9-437"/>
+                                                <constraint firstItem="U5W-lw-zR5" firstAttribute="trailingMargin" secondItem="C6C-qp-UIr" secondAttribute="trailing" constant="-5" id="MMb-9M-w6G"/>
+                                                <constraint firstItem="U5W-lw-zR5" firstAttribute="leading" secondItem="YfL-z7-2My" secondAttribute="trailing" constant="5" id="Qvf-B8-B3z"/>
+                                                <constraint firstAttribute="bottom" secondItem="YfL-z7-2My" secondAttribute="bottom" id="T0A-QR-G30"/>
+                                                <constraint firstItem="jE0-hl-c0A" firstAttribute="top" secondItem="eFf-GA-TIx" secondAttribute="top" id="YJw-9p-kU3"/>
+                                                <constraint firstItem="U5W-lw-zR5" firstAttribute="centerY" secondItem="C6C-qp-UIr" secondAttribute="centerY" id="bK3-f8-D4E"/>
+                                                <constraint firstItem="jE0-hl-c0A" firstAttribute="leading" secondItem="eFf-GA-TIx" secondAttribute="trailing" constant="5" id="lbl-l9-SVP"/>
+                                                <constraint firstItem="YfL-z7-2My" firstAttribute="leading" secondItem="jE0-hl-c0A" secondAttribute="trailing" constant="5" id="yR3-SL-3z2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagemImageView" destination="eFf-GA-TIx" id="z4p-3K-Tzu"/>
+                                            <outlet property="precoLabel" destination="dR9-e7-qDv" id="EFa-cm-poB"/>
+                                            <outlet property="tituloLabel" destination="Qoc-u2-Ffh" id="raN-LC-hSW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-15-wFO">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemIndigoColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XZh-C8-h1u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VRJ-JH-sgC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XZh-C8-h1u" secondAttribute="trailing" id="XKF-Pa-4rg"/>
+                            <constraint firstItem="Uid-15-wFO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mVo-Vh-FXd"/>
+                            <constraint firstItem="Uid-15-wFO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="osy-Si-Jli"/>
+                            <constraint firstItem="XZh-C8-h1u" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tQD-cs-yDn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XZh-C8-h1u" secondAttribute="bottom" id="xgF-cq-XHh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acessórios" id="BjY-cS-CKS"/>
+                    <connections>
+                        <outlet property="carregandoActivityIndicator" destination="Uid-15-wFO" id="qsd-Xy-d2c"/>
+                        <outlet property="tableView" destination="XZh-C8-h1u" id="aLM-h8-sU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag.badge.plus" catalog="system" width="124" height="128"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="maquina-inicio" width="120" height="146"/>
+        <namedColor name="favorito-preenchido">
+            <color red="0.89803921568627454" green="0.070588235294117646" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="preco">
+            <color red="0.050980392156862744" green="0.62352941176470589" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="texto-cinza">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
