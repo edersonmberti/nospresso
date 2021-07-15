@@ -16,11 +16,12 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Produtos-->
         <scene sceneID="By1-b1-5JX">
             <objects>
                 <navigationController navigationBarHidden="YES" id="PMo-vz-jfr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GUS-LE-7kh"/>
+                    <tabBarItem key="tabBarItem" title="Produtos" image="cart" catalog="system" selectedImage="cart.fill" id="E5i-c8-b2o"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VFG-Ca-f95">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,13 +42,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZi-TL-B7C" userLabel="Cafes">
-                                <rect key="frame" x="0.0" y="44" width="414" height="272.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="256.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capsulas-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="RAR-W8-vae">
-                                        <rect key="frame" x="278" y="68.5" width="136" height="136"/>
+                                        <rect key="frame" x="278" y="60" width="136" height="136"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hc6-ya-USi">
-                                        <rect key="frame" x="20" y="185.5" width="208" height="57"/>
+                                        <rect key="frame" x="20" y="169.5" width="208" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OG-ob-sQb">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="30.5"/>
@@ -77,13 +78,13 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQa-aY-GSC" userLabel="Maquinas">
-                                <rect key="frame" x="0.0" y="316.5" width="414" height="273"/>
+                                <rect key="frame" x="0.0" y="300.5" width="414" height="256"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquina-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-IL-rkJ">
-                                        <rect key="frame" x="294" y="63.5" width="120" height="146"/>
+                                        <rect key="frame" x="294" y="55" width="120" height="146"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-NY-aSc">
-                                        <rect key="frame" x="20" y="186" width="142.5" height="57"/>
+                                        <rect key="frame" x="20" y="169" width="142.5" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maquinas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAI-RK-Kru">
                                                 <rect key="frame" x="0.0" y="0.0" width="114" height="30.5"/>
@@ -109,13 +110,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deQ-F8-1GL" userLabel="Acessorios">
-                                <rect key="frame" x="0.0" y="589.5" width="414" height="272.5"/>
+                                <rect key="frame" x="0.0" y="556.5" width="414" height="256.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xicaras-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="gWo-J4-dul">
-                                        <rect key="frame" x="268" y="62.5" width="146" height="147"/>
+                                        <rect key="frame" x="268" y="55" width="146" height="147"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p0J-33-oi5">
-                                        <rect key="frame" x="20" y="185.5" width="145" height="57"/>
+                                        <rect key="frame" x="20" y="169.5" width="145" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acessórios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-RV-dH6">
                                                 <rect key="frame" x="0.0" y="0.0" width="128.5" height="30.5"/>
@@ -191,6 +192,8 @@
     </scenes>
     <resources>
         <image name="capsulas-inicio" width="136" height="136"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="maquina-inicio" width="120" height="146"/>
         <image name="xicaras-inicio" width="146" height="147"/>
         <namedColor name="acessorios">

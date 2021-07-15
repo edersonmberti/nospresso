@@ -36,6 +36,8 @@
 		E4AEA499269F998A00855F18 /* DetalhesAcessorioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AEA498269F998A00855F18 /* DetalhesAcessorioView.swift */; };
 		E4AEA49B269F999A00855F18 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AEA49A269F999A00855F18 /* DetalhesAcessorioPresenter.swift */; };
 		E4AEA49D269FA12100855F18 /* DetalhesCafe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AEA49C269FA12100855F18 /* DetalhesCafe.storyboard */; };
+		E4AEA4A1269FC8BF00855F18 /* Sacola.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AEA4A0269FC8BF00855F18 /* Sacola.storyboard */; };
+		E4AEA4A6269FC9C300855F18 /* Favoritos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AEA4A5269FC9C300855F18 /* Favoritos.storyboard */; };
 		E4E80C74269E10F5007A91B9 /* AcessoriosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E80C73269E10F5007A91B9 /* AcessoriosView.swift */; };
 		E4E80C76269E110A007A91B9 /* AcessoriosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E80C75269E110A007A91B9 /* AcessoriosPresenter.swift */; };
 		E4E80C79269E2018007A91B9 /* AcessorioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E80C78269E2018007A91B9 /* AcessorioTableViewCell.swift */; };
@@ -104,6 +106,8 @@
 		E4AEA498269F998A00855F18 /* DetalhesAcessorioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioView.swift; sourceTree = "<group>"; };
 		E4AEA49A269F999A00855F18 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		E4AEA49C269FA12100855F18 /* DetalhesCafe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetalhesCafe.storyboard; sourceTree = "<group>"; };
+		E4AEA4A0269FC8BF00855F18 /* Sacola.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sacola.storyboard; sourceTree = "<group>"; };
+		E4AEA4A5269FC9C300855F18 /* Favoritos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favoritos.storyboard; sourceTree = "<group>"; };
 		E4E80C73269E10F5007A91B9 /* AcessoriosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosView.swift; sourceTree = "<group>"; };
 		E4E80C75269E110A007A91B9 /* AcessoriosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosPresenter.swift; sourceTree = "<group>"; };
 		E4E80C78269E2018007A91B9 /* AcessorioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessorioTableViewCell.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				E4722EE22698ED5800F239B2 /* Cafes.storyboard */,
 				E4AEA493269F994800855F18 /* DetalhesAcessorio.storyboard */,
 				E4AEA49C269FA12100855F18 /* DetalhesCafe.storyboard */,
+				E4AEA4A0269FC8BF00855F18 /* Sacola.storyboard */,
+				E4AEA4A5269FC9C300855F18 /* Favoritos.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 		E4AA4C3E2674F67600865421 /* Telas */ = {
 			isa = PBXGroup;
 			children = (
+				E4AEA49F269FC8AC00855F18 /* Sacola */,
 				E4E80C72269E0EDD007A91B9 /* Acessorios */,
 				E4AEA495269F995300855F18 /* DetalhesAcessorio */,
 				E40ADA12267E2287001BFCF6 /* DetalhesCafe */,
@@ -294,6 +301,13 @@
 				E4AEA49A269F999A00855F18 /* DetalhesAcessorioPresenter.swift */,
 			);
 			path = DetalhesAcessorio;
+			sourceTree = "<group>";
+		};
+		E4AEA49F269FC8AC00855F18 /* Sacola */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sacola;
 			sourceTree = "<group>";
 		};
 		E4E80C72269E0EDD007A91B9 /* Acessorios */ = {
@@ -498,9 +512,11 @@
 				E4722EE32698ED5800F239B2 /* Cafes.storyboard in Resources */,
 				E4EBB0502672DDD900E6E581 /* LaunchScreen.storyboard in Resources */,
 				E40ADA0F267E18F0001BFCF6 /* CabecalhoView.xib in Resources */,
+				E4AEA4A6269FC9C300855F18 /* Favoritos.storyboard in Resources */,
 				E4EBB04D2672DDD900E6E581 /* Assets.xcassets in Resources */,
 				E4EBB04B2672DDD700E6E581 /* Main.storyboard in Resources */,
 				E434C00326753B5D005E5795 /* Produtos.storyboard in Resources */,
+				E4AEA4A1269FC8BF00855F18 /* Sacola.storyboard in Resources */,
 				E4AEA49D269FA12100855F18 /* DetalhesCafe.storyboard in Resources */,
 				E4AEA494269F994800855F18 /* DetalhesAcessorio.storyboard in Resources */,
 				E4AA4C3D2674E6D600865421 /* Open_Sans in Resources */,
