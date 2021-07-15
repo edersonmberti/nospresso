@@ -24,6 +24,10 @@ class DetalhesAcessorioViewController: UIViewController {
             descricaoLabel.text = acessorio.descricao
         }
     }
+    
+    @IBAction func fechar(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }
 
 extension DetalhesAcessorioViewController {

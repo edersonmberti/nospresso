@@ -3,10 +3,16 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Detalhes Acessorio View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -32,6 +38,9 @@
                                         <state key="normal" image="xmark" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="fechar:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1qs-KS-tBq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQi-bk-oAX">
                                         <rect key="frame" x="356.5" y="0.0" width="25.5" height="22"/>
@@ -61,11 +70,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5T-FG-fGX">
+                                <rect key="frame" x="16" y="776" width="382" height="46"/>
+                                <color key="backgroundColor" name="verdao-vendedor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="W6b-Uj-9EL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="Adicionar à Sacola">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="R5T-FG-fGX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0Wr-YP-YfL"/>
                             <constraint firstItem="KW2-5C-Xkg" firstAttribute="top" secondItem="mjE-cD-Up2" secondAttribute="bottom" constant="8" id="I2z-N8-S60"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R5T-FG-fGX" secondAttribute="trailing" constant="16" id="J9S-Cq-BXQ"/>
                             <constraint firstItem="KW2-5C-Xkg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="LBo-ps-Jfo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KW2-5C-Xkg" secondAttribute="trailing" constant="16" id="PGD-Vs-yAB"/>
                             <constraint firstItem="0vg-uY-ZHF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="S80-jv-fJ1"/>
@@ -76,6 +98,7 @@
                             <constraint firstItem="mjE-cD-Up2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="r2t-1z-qeh"/>
                             <constraint firstItem="KW2-5C-Xkg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="s7N-Zo-bla"/>
                             <constraint firstItem="crb-Au-gZX" firstAttribute="top" secondItem="0vg-uY-ZHF" secondAttribute="bottom" constant="6" id="sWs-TC-vYH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="R5T-FG-fGX" secondAttribute="bottom" constant="40" id="spc-mf-OS9"/>
                             <constraint firstItem="0vg-uY-ZHF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="y8J-UY-1GF"/>
                             <constraint firstItem="M5Z-i1-iVl" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="z4g-9A-WS8"/>
                         </constraints>
@@ -96,6 +119,9 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="maquina-inicio" width="120" height="146"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="verdao-vendedor">
+            <color red="0.47843137254901963" green="0.69803921568627447" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

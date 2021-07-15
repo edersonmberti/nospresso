@@ -102,7 +102,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-15-wFO">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-15-wFO">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemIndigoColor"/>
                             </activityIndicatorView>
@@ -147,12 +147,6 @@
                             <constraint firstItem="XZh-C8-h1u" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tQD-cs-yDn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XZh-C8-h1u" secondAttribute="bottom" id="xgF-cq-XHh"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="XZh-C8-h1u"/>
-                                <exclude reference="Uid-15-wFO"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Acessórios" id="BjY-cS-CKS"/>
                     <connections>
