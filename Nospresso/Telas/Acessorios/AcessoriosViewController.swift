@@ -11,6 +11,8 @@ class AcessoriosViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var carregandoActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var erroStackView: UIStackView!
+    @IBOutlet weak var mensagemDeErroLabel: UILabel!
     
     private var categoriasAcessorios: [CategoriaAcessorio] = []
     
@@ -19,7 +21,7 @@ class AcessoriosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        presenter?.telaCarregou()
+        buscarDados()
         configurarTabela()
     }
     
@@ -29,8 +31,20 @@ class AcessoriosViewController: UIViewController {
         configurarBarraDeNavegação()
     }
     
-    private func configurarTabela() {
+    @IBAction func tentarNovamente(_ sender: Any) {
+        buscarDados()
+    }
+    
+    private func buscarDados() {
+        mensagemDeErroLabel.text = ""
+        erroStackView.isHidden = true
         tableView.isHidden = true
+        carregandoActivityIndicator.isHidden = false
+        
+        presenter?.buscarDados()
+    }
+    
+    private func configurarTabela() {
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -43,12 +57,19 @@ class AcessoriosViewController: UIViewController {
 }
 
 extension AcessoriosViewController: AcessoriosViewProtocol {
-    func recebeu(categoriasAcessorios: [CategoriaAcessorio]) {
+    func recebeuComSucesso(categoriasAcessorios: [CategoriaAcessorio]) {
         DispatchQueue.main.async {
             self.categoriasAcessorios = categoriasAcessorios
             self.carregandoActivityIndicator.isHidden = true
             self.tableView.isHidden = false
             self.tableView.reloadData()
+        }
+    }
+    
+    func recebeuComErro(mensagemDeError: String) {
+        DispatchQueue.main.async {
+            self.mensagemDeErroLabel.text = mensagemDeError
+            self.erroStackView.isHidden = false
         }
     }
 }

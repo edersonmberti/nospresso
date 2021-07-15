@@ -8,5 +8,6 @@
 import Foundation
 
 protocol AcessoriosViewProtocol: AnyObject {
-    func recebeu(categoriasAcessorios: [CategoriaAcessorio])
+    func recebeuComSucesso(categoriasAcessorios: [CategoriaAcessorio])
+    func recebeuComErro(mensagemDeError: String)
 }

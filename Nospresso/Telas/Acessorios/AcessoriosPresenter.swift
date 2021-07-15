@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AcessoriosPresenterProtocol {
-    func telaCarregou()
+    func buscarDados()
     func adicionouASacola()
     func favoritou()
 }
@@ -28,12 +28,11 @@ class AcessoriosPresenter {
 }
 
 extension AcessoriosPresenter: AcessoriosPresenterProtocol {
-    func telaCarregou() {
+    func buscarDados() {
         api.requisitar(endpoint: .acessorios) { [weak self] (categoriasAcessorios: [CategoriaAcessorio]) in
-            self?.tela?.recebeu(categoriasAcessorios: categoriasAcessorios)
+            self?.tela?.recebeuComSucesso(categoriasAcessorios: categoriasAcessorios)
         } falha: { erro in
-            // TODO
-            print(erro)
+            self.tela?.recebeuComErro(mensagemDeError: erro.localizedDescription)
         }
     }
     

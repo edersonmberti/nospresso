@@ -106,21 +106,59 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemIndigoColor"/>
                             </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="JFB-OW-cfn">
+                                <rect key="frame" x="18" y="365" width="378" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deu ruim, diretor!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twK-BF-QqM">
+                                        <rect key="frame" x="113" y="0.0" width="152" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="texto-cinza"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iop-0X-K8V">
+                                        <rect key="frame" x="164" y="55" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le1-4E-bhq">
+                                        <rect key="frame" x="127.5" y="136" width="123" height="30"/>
+                                        <state key="normal" title="Tentar novamente">
+                                            <color key="titleColor" name="favorito-preenchido"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tentarNovamente:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wXj-FC-rwQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JFB-OW-cfn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Bac-Or-chY"/>
+                            <constraint firstItem="JFB-OW-cfn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nmk-iN-Hty"/>
                             <constraint firstItem="XZh-C8-h1u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VRJ-JH-sgC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JFB-OW-cfn" secondAttribute="trailing" constant="18" id="Vo9-vI-sTn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XZh-C8-h1u" secondAttribute="trailing" id="XKF-Pa-4rg"/>
+                            <constraint firstItem="JFB-OW-cfn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="bby-eu-0gl"/>
                             <constraint firstItem="Uid-15-wFO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mVo-Vh-FXd"/>
                             <constraint firstItem="Uid-15-wFO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="osy-Si-Jli"/>
                             <constraint firstItem="XZh-C8-h1u" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tQD-cs-yDn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XZh-C8-h1u" secondAttribute="bottom" id="xgF-cq-XHh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XZh-C8-h1u"/>
+                                <exclude reference="Uid-15-wFO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Acessórios" id="BjY-cS-CKS"/>
                     <connections>
                         <outlet property="carregandoActivityIndicator" destination="Uid-15-wFO" id="qsd-Xy-d2c"/>
+                        <outlet property="erroStackView" destination="JFB-OW-cfn" id="L4B-IF-c3t"/>
+                        <outlet property="mensagemDeErroLabel" destination="Iop-0X-K8V" id="wRj-8m-wM0"/>
                         <outlet property="tableView" destination="XZh-C8-h1u" id="aLM-h8-sU7"/>
                     </connections>
                 </viewController>
