@@ -12,4 +12,5 @@ extension UIColor {
     static let intensidadePreenchida = UIColor(named: "intensidade-preenchida")
     static let intensidadeVazia = UIColor(named: "intensidade-vazia")
     static let bordaIntensidadeVazia = UIColor(named: "separador")
+    static let verdãoVerde = UIColor(named: "verdao-vendedor")
 }
