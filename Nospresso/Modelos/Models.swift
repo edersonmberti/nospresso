@@ -12,12 +12,13 @@ struct Capsulas: Decodable {
     let cafes: [Cafe]
 }
 
-//struct Cafe: Decodable, Hashable, Encodable {
-struct Cafe: Codable, Hashable {
+struct Cafe: Armazenável, Codable {
+    var tipo = Tipo.cafe
+    
     let id: Int
     let nome: String
     let preco: Double
-    let descricao: String
+    let descricao: String?
     let imagem: String
     let intensidade: Int?
     let medidas: [MedidaCafe]
@@ -42,19 +43,30 @@ struct CategoriaAcessorio: Codable {
     let itens: [Acessorio]
 }
 
-struct Acessorio: Codable {
+struct Acessorio: Armazenável, Codable {
     let id: Int
     let nome: String
     let preco: Double
     let imagem: String
     let descricao: String?
+    
+    var tipo = Tipo.acessorio
+    
+    enum CodingKeys: String, CodingKey {
+        case id, nome, descricao, imagem, preco
+    }
 }
 
-struct Maquina: Codable {
+struct Maquina: Armazenável, Codable {
     let id: Int
     let nome: String
-    let preco: Int
-    let descricao: String
+    let preco: Double
+    let descricao: String?
     let imagem: String
+    
+    var tipo = Tipo.maquina
+    
+    enum CodingKeys: String, CodingKey {
+        case id, nome, descricao, imagem, preco
+    }
 }
-
