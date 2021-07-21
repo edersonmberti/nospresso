@@ -8,5 +8,6 @@
 import Foundation
 
 protocol DetalhesAcessorioViewProtocol: AnyObject {
-    
+    func configurar(acessorio: Acessorio)
+    func atualizarFavorito(valor: Bool)
 }
