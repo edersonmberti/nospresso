@@ -15,11 +15,11 @@ protocol AcessoriosPresenterProtocol {
 
 class AcessoriosPresenter {
     let api: APIProtocol
-    let favoritos: FavoritosProtocolo
+    let favoritos: FavoritosProtocol
     weak var tela: AcessoriosViewProtocol?
     
     init(api: API,
-         favoritos: FavoritosProtocolo = Favoritos.instancia,
+         favoritos: FavoritosProtocol = Favoritos.instancia,
          tela: AcessoriosViewProtocol) {
         self.api = api
         self.favoritos = favoritos

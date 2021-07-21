@@ -47,8 +47,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <color key="tintColor" name="favorito-preenchido"/>
                                                             <state key="normal" image="heart" catalog="system">
+                                                                <color key="titleColor" name="favorito-preenchido"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="tocouEmFavoritar:" destination="Ytd-eU-K2c" eventType="touchUpInside" id="8xG-Or-DNn"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOk-co-tFt">
                                                             <rect key="frame" x="0.0" y="39" width="25.5" height="31"/>
@@ -57,6 +61,9 @@
                                                             <state key="normal" image="bag.badge.plus" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="tocouEmAdicionarSacola:" destination="Ytd-eU-K2c" eventType="touchUpInside" id="vuv-e1-SjR"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -95,6 +102,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="botaoFavorito" destination="pEF-Zv-Hl6" id="h0q-65-gRa"/>
+                                            <outlet property="botaoSacola" destination="sOk-co-tFt" id="hrr-i3-H6Y"/>
                                             <outlet property="imagemImageView" destination="eFf-GA-TIx" id="z4p-3K-Tzu"/>
                                             <outlet property="precoLabel" destination="dR9-e7-qDv" id="EFa-cm-poB"/>
                                             <outlet property="tituloLabel" destination="Qoc-u2-Ffh" id="raN-LC-hSW"/>

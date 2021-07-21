@@ -29,6 +29,7 @@ class AcessoriosViewController: UIViewController {
         super.viewWillAppear(animated)
         
         configurarBarraDeNavegação()
+        tableView.reloadData()
     }
     
     @IBAction func tentarNovamente(_ sender: Any) {
@@ -69,6 +70,7 @@ extension AcessoriosViewController: AcessoriosViewProtocol {
     func recebeuComErro(mensagemDeError: String) {
         DispatchQueue.main.async {
             self.mensagemDeErroLabel.text = mensagemDeError
+            self.carregandoActivityIndicator.isHidden = true
             self.erroStackView.isHidden = false
         }
     }
@@ -94,10 +96,13 @@ extension AcessoriosViewController: UITableViewDelegate {
         guard let controlador = quadroDeEstoria.instantiateViewController(withIdentifier: DetalhesAcessorioViewController.identificador) as? DetalhesAcessorioViewController else { return }
         
         let acessorio = categoriasAcessorios[indexPath.section].itens[indexPath.row]
-    
-        controlador.acessorio = acessorio
+        let presenter = DetalhesAcessorioPresenter(acessorio: acessorio, tela: controlador)
         
-        navigationController?.present(controlador, animated: true)
+        controlador.presenter = presenter
+        
+        navigationController?.present(controlador, animated: true) {
+            tableView.reloadData()
+        }
     }
 }
 
