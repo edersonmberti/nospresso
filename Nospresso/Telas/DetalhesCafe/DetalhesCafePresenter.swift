@@ -16,12 +16,12 @@ protocol DetalhesCafePresenterProtocol {
 class DetalhesCafePresenter {
     let api: APIProtocol
     let cafe: Cafe
-    let favoritos: FavoritosProtocolo
+    let favoritos: FavoritosProtocol
     weak var tela: DetalhesCafeViewProtocol?
     
     init(api: API,
          cafe: Cafe,
-         favoritos: FavoritosProtocolo = Favoritos.instancia,
+         favoritos: FavoritosProtocol = Favoritos.instancia,
          tela: DetalhesCafeViewProtocol) {
         self.api = api
         self.cafe = cafe
@@ -32,7 +32,7 @@ class DetalhesCafePresenter {
 
 extension DetalhesCafePresenter: DetalhesCafePresenterProtocol {
     func telaCarregou() {
-        tela?.atualizarFavorito(valor: Favoritos.instancia.estaFavoritado(cafe: cafe))
+        tela?.atualizarFavorito(valor: Favoritos.instancia.estaFavoritado(favorito: cafe))
         
         api.requisitar(endpoint: .cafes(id: cafe.id)) { [weak self] (cafe: Cafe) in
             self?.tela?.recebeu(cafe: cafe)
@@ -42,16 +42,14 @@ extension DetalhesCafePresenter: DetalhesCafePresenterProtocol {
         }
     }
     
-    func adicionouASacola() {
-        // TODO
-    }
+    func adicionouASacola() {}
     
     func favoritou() {
-        if Favoritos.instancia.estaFavoritado(cafe: cafe) {
-            Favoritos.instancia.remover(cafe: cafe)
+        if Favoritos.instancia.estaFavoritado(favorito: cafe) {
+            Favoritos.instancia.remover(favorito: cafe)
             tela?.atualizarFavorito(valor: false)
         } else {
-            Favoritos.instancia.adicionar(cafe: cafe)
+            Favoritos.instancia.adicionar(favorito: cafe)
             tela?.atualizarFavorito(valor: true)
         }
     }

@@ -24,7 +24,7 @@ class CafeTableViewCell: UITableViewCell {
     func configurar(com cafe: Cafe) {
         capsulaImageView.carregarImagem(da: cafe.imagem)
         tituloLabel.text = cafe.nome
-        descricaoLabel.text = cafe.descricao.capitalized
+        descricaoLabel.text = cafe.descricao?.capitalized
         precoLabel.text = cafe.preco.comoDinheiro
         
         

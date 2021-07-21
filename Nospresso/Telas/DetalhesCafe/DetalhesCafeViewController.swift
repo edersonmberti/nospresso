@@ -53,9 +53,6 @@ extension DetalhesCafeViewController: DetalhesCafeViewProtocol {
         DispatchQueue.main.async {
             self.cafeImageView.carregarImagem(da: cafe.imagem)
             self.intensidadeStackView.configurar(com: cafe)
-//            self.intensidadeLabel.text = "intensidade: \(cafe.intensidade)"
-//            self.precoLabel.text = cafe.preco.comoDinheiro
-//            self.descricaoLabel.text = cafe.descricao
             self.origemLabel.text = cafe.origem
             self.torrefacaoLabel.text = cafe.torrefacao
             self.perfilAromaticoLabel.text = cafe.perfilAromatico
