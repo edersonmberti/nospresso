@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BA79A441-C3DF-4051-ACD1-1B7B6A3CA7E4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Nospresso/AppDelegate.swift"
@@ -30,8 +30,8 @@
             filePath = "Nospresso/Telas/Acessorios/AcessoriosViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "AcessoriosViewController"
             landmarkType = "21">
          </BreakpointContent>

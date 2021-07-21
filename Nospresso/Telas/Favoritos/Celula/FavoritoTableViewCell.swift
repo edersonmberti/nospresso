@@ -14,21 +14,10 @@ class FavoritoTableViewCell: UITableViewCell {
     @IBOutlet weak var tipoLabel: UILabel!
     @IBOutlet weak var precoLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    func configurar(com cafe: Cafe) {
-        imagemImageView.carregarImagem(da: cafe.imagem)
-        nomeLabel.text = cafe.nome
-        tipoLabel.text = "Café".uppercased()
-        precoLabel.text = cafe.preco.comoDinheiro
+    func configurar(com favorito: ItemFavorito) {
+        imagemImageView.carregarImagem(da: favorito.imagem)
+        nomeLabel.text = favorito.nome
+        tipoLabel.text = favorito.tipo.rawValue.uppercased()
+        precoLabel.text = favorito.preco.comoDinheiro
     }
 }

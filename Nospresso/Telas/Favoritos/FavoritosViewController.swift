@@ -9,36 +9,31 @@ import UIKit
 
 class FavoritosViewController: UIViewController {
     
+    lazy var presenter: FavoritosPresenterProtocol = FavoritosPresenter(tela: self)
+    
     @IBOutlet weak var tableView: UITableView!
-    
-    private let refreshControl = UIRefreshControl()
-    
-    private var cafes: [Cafe] = []
     
     private let cellReuseIdentifier = "favorito-celula"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cafes = Favoritos.instancia.listar()
         self.configurarTabela()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     private func configurarTabela() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        } else {
-            tableView.addSubview(refreshControl)
-        }
-        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
     }
-    
-    @objc private func refreshWeatherData(_ sender: Any) {
-        self.cafes = Favoritos.instancia.listar()
-        self.tableView.reloadData()
-        self.refreshControl.endRefreshing()
+}
+
+extension FavoritosViewController: FavoritosViewProtocol {
+    func recarregarTabela() {
+        tableView.reloadData()
     }
 }
 
@@ -51,16 +46,16 @@ extension FavoritosViewController: UITableViewDelegate {
 extension FavoritosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cafes.count
+        presenter.numeroDeFavoritos()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
         if let celulaDeFavorito = celula as? FavoritoTableViewCell {
-            let cafe = cafes[indexPath.row]
+            let favorito = presenter.buscarFavorito(no: indexPath.row)
             
-            celulaDeFavorito.configurar(com: cafe)
+            celulaDeFavorito.configurar(com: favorito)
         }
         
         return celula
@@ -68,7 +63,7 @@ extension FavoritosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal,
-                                        title: "Adicionar à sacola") { (action, view, completionHandler) in
+                                        title: "Comprar") { (action, view, completionHandler) in
             // TODO : - Adicionar à sacola!
             completionHandler(true)
         }
@@ -79,11 +74,8 @@ extension FavoritosViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal,
                                         title: "Remover") { [weak self] (action, view, completionHandler) in
-            if let cafe = self?.cafes[indexPath.row] {
-                Favoritos.instancia.remover(cafe: cafe)
-                self?.cafes = Favoritos.instancia.listar()
-                self?.tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
+            self?.presenter.removerFavorito(no: indexPath.row)
+            self?.tableView.deleteRows(at: [indexPath], with: .automatic)
             completionHandler(true)
         }
         action.backgroundColor = .red

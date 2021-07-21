@@ -23,9 +23,14 @@
 		E434BFFD26752E84005E5795 /* UIImageView+Carregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434BFFC26752E84005E5795 /* UIImageView+Carregamento.swift */; };
 		E434C0012675301A005E5795 /* Double+Dinheiros.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434C0002675301A005E5795 /* Double+Dinheiros.swift */; };
 		E434C00326753B5D005E5795 /* Produtos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E434C00226753B5D005E5795 /* Produtos.storyboard */; };
+		E43BCB1326A8BA160031FF10 /* FavoritosViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BCB1226A8BA160031FF10 /* FavoritosViewProtocol.swift */; };
+		E43BCB1526A8BA320031FF10 /* FavoritosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BCB1426A8BA320031FF10 /* FavoritosPresenter.swift */; };
 		E4722EDF2698EC0200F239B2 /* AcessoriosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4722EDE2698EC0200F239B2 /* AcessoriosViewController.swift */; };
 		E4722EE12698EC1900F239B2 /* Acessorios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4722EE02698EC1900F239B2 /* Acessorios.storyboard */; };
 		E4722EE32698ED5800F239B2 /* Cafes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4722EE22698ED5800F239B2 /* Cafes.storyboard */; };
+		E49A5FA426A23EF5007FEEB7 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A5FA326A23EF5007FEEB7 /* FavoritosViewController.swift */; };
+		E49A5FA726A24037007FEEB7 /* FavoritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A5FA626A24037007FEEB7 /* FavoritoTableViewCell.swift */; };
+		E49A5FC126A4F332007FEEB7 /* Sacola.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A5FC026A4F332007FEEB7 /* Sacola.swift */; };
 		E4AA4C3D2674E6D600865421 /* Open_Sans in Resources */ = {isa = PBXBuildFile; fileRef = E4AA4C3C2674E6D600865421 /* Open_Sans */; };
 		E4AA4C402674F72A00865421 /* CafesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA4C3F2674F72A00865421 /* CafesViewController.swift */; };
 		E4AA4C452674FB1600865421 /* UIColor+Paleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA4C442674FB1600865421 /* UIColor+Paleta.swift */; };
@@ -52,6 +57,7 @@
 		E4EBB0752672E13800E6E581 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EBB0742672E13800E6E581 /* API.swift */; };
 		E4EBB0772672E15C00E6E581 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EBB0762672E15C00E6E581 /* Endpoint.swift */; };
 		E4EBB0792672E17700E6E581 /* ErroRequisicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EBB0782672E17700E6E581 /* ErroRequisicao.swift */; };
+		E4F5A7E726A5FFAA0089F923 /* Armazenamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F5A7E626A5FFAA0089F923 /* Armazenamento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,9 +99,14 @@
 		E434BFFC26752E84005E5795 /* UIImageView+Carregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Carregamento.swift"; sourceTree = "<group>"; };
 		E434C0002675301A005E5795 /* Double+Dinheiros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Dinheiros.swift"; sourceTree = "<group>"; };
 		E434C00226753B5D005E5795 /* Produtos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Produtos.storyboard; sourceTree = "<group>"; };
+		E43BCB1226A8BA160031FF10 /* FavoritosViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewProtocol.swift; sourceTree = "<group>"; };
+		E43BCB1426A8BA320031FF10 /* FavoritosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosPresenter.swift; sourceTree = "<group>"; };
 		E4722EDE2698EC0200F239B2 /* AcessoriosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosViewController.swift; sourceTree = "<group>"; };
 		E4722EE02698EC1900F239B2 /* Acessorios.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Acessorios.storyboard; sourceTree = "<group>"; };
 		E4722EE22698ED5800F239B2 /* Cafes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cafes.storyboard; sourceTree = "<group>"; };
+		E49A5FA326A23EF5007FEEB7 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		E49A5FA626A24037007FEEB7 /* FavoritoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoTableViewCell.swift; sourceTree = "<group>"; };
+		E49A5FC026A4F332007FEEB7 /* Sacola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sacola.swift; sourceTree = "<group>"; };
 		E4AA4C3C2674E6D600865421 /* Open_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Open_Sans; sourceTree = "<group>"; };
 		E4AA4C3F2674F72A00865421 /* CafesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewController.swift; sourceTree = "<group>"; };
 		E4AA4C442674FB1600865421 /* UIColor+Paleta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Paleta.swift"; sourceTree = "<group>"; };
@@ -128,6 +139,7 @@
 		E4EBB0742672E13800E6E581 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E4EBB0762672E15C00E6E581 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E4EBB0782672E17700E6E581 /* ErroRequisicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroRequisicao.swift; sourceTree = "<group>"; };
+		E4F5A7E626A5FFAA0089F923 /* Armazenamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Armazenamento.swift; sourceTree = "<group>"; };
 		FDF69769252EB2D3AFFCBFFB /* Pods-NospressoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.debug.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				E40ADA21267E5B6F001BFCF6 /* Favoritos.swift */,
+				E49A5FC026A4F332007FEEB7 /* Sacola.swift */,
+				E4F5A7E626A5FFAA0089F923 /* Armazenamento.swift */,
 			);
 			name = "Serviços";
 			path = "Serviços";
@@ -235,6 +249,25 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		E49A5FA226A23EE9007FEEB7 /* Favoritos */ = {
+			isa = PBXGroup;
+			children = (
+				E49A5FA526A23F0D007FEEB7 /* Celula */,
+				E49A5FA326A23EF5007FEEB7 /* FavoritosViewController.swift */,
+				E43BCB1226A8BA160031FF10 /* FavoritosViewProtocol.swift */,
+				E43BCB1426A8BA320031FF10 /* FavoritosPresenter.swift */,
+			);
+			path = Favoritos;
+			sourceTree = "<group>";
+		};
+		E49A5FA526A23F0D007FEEB7 /* Celula */ = {
+			isa = PBXGroup;
+			children = (
+				E49A5FA626A24037007FEEB7 /* FavoritoTableViewCell.swift */,
+			);
+			path = Celula;
+			sourceTree = "<group>";
+		};
 		E4AA4C3A2674E67800865421 /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +288,7 @@
 		E4AA4C3E2674F67600865421 /* Telas */ = {
 			isa = PBXGroup;
 			children = (
+				E49A5FA226A23EE9007FEEB7 /* Favoritos */,
 				E4AEA49F269FC8AC00855F18 /* Sacola */,
 				E4E80C72269E0EDD007A91B9 /* Acessorios */,
 				E4AEA495269F995300855F18 /* DetalhesAcessorio */,
@@ -650,17 +684,23 @@
 				E4EBB0482672DDD700E6E581 /* MenuProdutoViewController.swift in Sources */,
 				E4EBB0442672DDD700E6E581 /* AppDelegate.swift in Sources */,
 				E4EBB0792672E17700E6E581 /* ErroRequisicao.swift in Sources */,
+				E49A5FA726A24037007FEEB7 /* FavoritoTableViewCell.swift in Sources */,
 				E4EBB0752672E13800E6E581 /* API.swift in Sources */,
 				E4E80C79269E2018007A91B9 /* AcessorioTableViewCell.swift in Sources */,
+				E4F5A7E726A5FFAA0089F923 /* Armazenamento.swift in Sources */,
 				E40ADA16267E2393001BFCF6 /* DetalhesCafePresenter.swift in Sources */,
+				E49A5FA426A23EF5007FEEB7 /* FavoritosViewController.swift in Sources */,
 				E40ADA1D267E3B92001BFCF6 /* ContadorIntesidadeStackView.swift in Sources */,
 				E4AEA499269F998A00855F18 /* DetalhesAcessorioView.swift in Sources */,
 				E40ADA1A267E2497001BFCF6 /* DetalhesCafeView.swift in Sources */,
 				E434C0012675301A005E5795 /* Double+Dinheiros.swift in Sources */,
 				E4EBB0462672DDD700E6E581 /* SceneDelegate.swift in Sources */,
+				E43BCB1326A8BA160031FF10 /* FavoritosViewProtocol.swift in Sources */,
 				E4E80C74269E10F5007A91B9 /* AcessoriosView.swift in Sources */,
+				E49A5FC126A4F332007FEEB7 /* Sacola.swift in Sources */,
 				E40ADA14267E22B2001BFCF6 /* DetalhesCafeViewController.swift in Sources */,
 				E4AA4C452674FB1600865421 /* UIColor+Paleta.swift in Sources */,
+				E43BCB1526A8BA320031FF10 /* FavoritosPresenter.swift in Sources */,
 				E4AA4C4826751DA300865421 /* CafeTableViewCell.swift in Sources */,
 				E4722EDF2698EC0200F239B2 /* AcessoriosViewController.swift in Sources */,
 				E4EBB0772672E15C00E6E581 /* Endpoint.swift in Sources */,
