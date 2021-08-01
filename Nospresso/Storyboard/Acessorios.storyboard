@@ -62,7 +62,7 @@
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="tocouEmAdicionarSacola:" destination="Ytd-eU-K2c" eventType="touchUpInside" id="vuv-e1-SjR"/>
+                                                                <action selector="tocouEmAdicionarASacola:" destination="Ytd-eU-K2c" eventType="touchUpInside" id="KhX-VR-bQf"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>

@@ -116,8 +116,9 @@ extension AcessoriosViewController: UITableViewDataSource {
 
         if let celulaDeAcessorio = celula as? AcessorioTableViewCell {
             let item = categoriasAcessorios[indexPath.section].itens[indexPath.row]
-
-            celulaDeAcessorio.configurar(com: item)
+            let presenter = AcessorioTableViewCellPresenter(acessorio: item, tela: celulaDeAcessorio)
+            celulaDeAcessorio.presenter = presenter
+            celulaDeAcessorio.configurar()
         }
         
         return celula

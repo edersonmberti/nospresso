@@ -11,15 +11,30 @@
         <!--Sacola-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Sacola" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="Sacola" id="Y6W-OH-hqX" customClass="SacolaViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JXP-xt-7eS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JXP-xt-7eS" secondAttribute="trailing" id="9B3-JG-XXL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JXP-xt-7eS" secondAttribute="bottom" id="CCo-Wy-sTd"/>
+                            <constraint firstItem="JXP-xt-7eS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EO5-Li-s4z"/>
+                            <constraint firstItem="JXP-xt-7eS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FCy-N6-Qd5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sacola" image="bag" catalog="system" selectedImage="bag.fill" id="hPg-Cf-jNk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="JXP-xt-7eS" id="Dvr-tt-Ped"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

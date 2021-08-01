@@ -80,6 +80,9 @@
                                                             </constraints>
                                                             <color key="tintColor" name="favorito-preenchido"/>
                                                             <state key="normal" image="heart" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="tocouEmFavoritar:" destination="Vp4-Gh-6br" eventType="touchUpInside" id="tQK-qx-HTq"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-k7-KCB">
                                                             <rect key="frame" x="0.0" y="40" width="40" height="40"/>
@@ -115,6 +118,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="botaoFavorito" destination="zpW-dZ-z23" id="xZ0-Wr-XIg"/>
                                             <outlet property="capsulaImageView" destination="nld-FG-VCW" id="JMb-j0-GEf"/>
                                             <outlet property="descricaoLabel" destination="rWn-RA-Ia9" id="E80-Jd-Jy6"/>
                                             <outlet property="intensidadeLabel" destination="zUF-PG-YIM" id="hJw-P9-Xev"/>
