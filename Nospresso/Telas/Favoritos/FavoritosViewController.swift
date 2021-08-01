@@ -54,8 +54,9 @@ extension FavoritosViewController: UITableViewDataSource {
         
         if let celulaDeFavorito = celula as? FavoritoTableViewCell {
             let favorito = presenter.buscarFavorito(no: indexPath.row)
-            
-            celulaDeFavorito.configurar(com: favorito)
+            let presenter = FavoritoTableViewCellPresenter(favorito: favorito, tela: celulaDeFavorito)
+            celulaDeFavorito.presenter = presenter
+            celulaDeFavorito.configurar()
         }
         
         return celula
